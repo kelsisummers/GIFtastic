@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIFtastic</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- UIKit CSS & Javascript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+
+</head>
+<body>
+
+
+
+    <!-- <div class="uk-inline"> -->
+            <div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" style="background-image: url('assets/images/cover-image.jpg');">
+            <!-- <img src="assets/images/cover-image.jpg" alt=""> -->
+            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">Headline</h1>
+
+            <!-- <div class="uk-overlay uk-overlay-default uk-position-center"><p><div uk-parallax="bgy: -200">Pixels from Pixar</div></p></div> -->
+        </div>
+
+
+    <div class="container">
+        
+
+        <!-- Buttons Will Populate Here -->
+        <div id="buttons-view"></div>
+
+        <!-- Search Form Code Here -->
+        <form id="gif-form">
+            <label for='search-input'>Type Something Pixar</label>
+            <input type="text" id='search-input'><br>
+
+            <!-- Button Click to Add New Search Term -->
+            <input id='add-gifs' type='submit' value="Add Pixels">
+        </form>
+
+        <!-- GIFS Will Appear Here -->
+        <div id="gifs-view"></div>
+
+    </div>
+
+<!-- Javascript & JQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
