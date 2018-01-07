@@ -1,3 +1,94 @@
-/* body {
-    background-image: url("../assets/images/cover-image.jpg");
-} */
+/* Cover Image */
+.uk-background-cover {
+    background-image: url('../images/cover-image.jpg');
+    height: 60vw;
+    z-index: 0;
+    position: relative;
+}
+
+/* Ballon Images */
+#balloons {
+    display: inline-block;
+    position: absolute;
+    top: 325px;
+    left: 275px;
+}
+
+/* Title Text */
+h1 {
+    font-size: 200px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+/* Button Appearance */
+#button-container {
+    padding: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 150px;
+}
+
+.gif-button {
+    margin: 10px;
+    margin-top: 0px;
+}
+
+#buttons-view {
+    margin-bottom: 80px;
+}
+
+/* Form Appearance */
+#search-input {
+    margin-bottom: 30px;
+}
+
+#add-gifs {
+    margin-left: -1px;
+}
+
+#gif-form {
+    margin-bottom: 80px;
+}
+
+/* Gif Appearnce */
+#gifs-view {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+#rating {
+    z-index: 3;
+    position: absolute;
+    top: -25px;
+    right: 0px;
+}
+
+/* Changes Color and Opacity of Rating Text */
+.uk-label {
+    background-color: black;
+    opacity: .5;
+}
+
+
+/* Adding Responsive */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 75px;
+    }
+
+    h2 {
+        font-size: 75px;
+    }
+
+    #buttons-column {
+        margin-bottom: 300px;
+    }
+
+    form {
+     margin-top: 100px;
+    }
+ }

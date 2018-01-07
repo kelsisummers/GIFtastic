@@ -1,78 +1,119 @@
 // Initial Array of Search Terms
-
-var topics = ["The Incredibles", "Wall-E", "Inside Out", "Toy Story", "Ratatouille", "Finding Nemo", "A Bug's Life"];
+var topics = ["The Incredibles", "Wall-E", "Inside Out", "Toy Story", "Ratatouille", "Finding Nemo", "A Bug's Life", "Up"];
 
 
 
 // Function for dumping the JSON content for each button into the div
-function displayMovieInfo() {
+function displayGIF() {
+
+    // Empties GIF Container
     $('#gifs-view').empty();
-    search = $(this).data('name');
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=pixar+" + search + "&api_key=hLs3wdbBMaPe6kBOZTHuFQHvKAVxkFS6&limit=10";
+    // When Button is Clicked, 'Name' Becomes Search Variable
+    var search = $(this).data('name');
 
+    // Creates URL with Search Term for Giphy API
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=pixar+" + search + "&api_key=hLs3wdbBMaPe6kBOZTHuFQHvKAVxkFS6&limit=15";
+
+    // AJAX Call to Giphy API
     $.ajax({
     url: queryURL,
     method: "GET"
+    // When AJAX Call is "Done"
     }).done(function(response) {
-        console.log(response);
-        for (var i=0; i < response.data.length;i++){
-        $('#gifs-view').append(
-            
-            '<img src="' + response.data[i].images.fixed_height_still.url + 
-            '"data-still="'+ response.data[i].images.fixed_height_still.url + 
-            '"data-animate="'+response.data[i].images.fixed_height.url +'"data-state="still" class="gif">'
-            
-            
-             + '<div id="rating">Rated: ' + response.data[i].rating + '</div>');
-        }
-    });
-}
 
-// Function for displaying movie data
+        // Log Response to Console
+        console.log(response);
+
+        // For Loop to Populate 10 Gifs
+        for (var i=0; i < response.data.length;i++){
+        
+        // Appended to HTML
+        $('#gifs-view').append(
+
+            // Initial Image Source; Still Image; Assign "gif" class
+            '<div id = "gif" style = "position: relative"><img class="gif" src="' + response.data[i].images.fixed_height_still.url + 
+            // URL for Data State Still Gif
+            '"data-still="'+ response.data[i].images.fixed_height_still.url + 
+            // URL for Data Sate Animated Gif
+            '"data-animate="'+response.data[i].images.fixed_height.url +
+            // Assigns Initial Data State of Still
+            '"data-state="still" style="position:relative"><div id="rating" class= "uk-label">Rated: ' + response.data[i].rating + '</div></div>'
+            
+            // Rating Text
+            // '<div id="rating">Rated: ' + response.data[i].rating + 
+                   
+             )
+        }
+    })
+};
+
+// Function for Displaying Search Buttons from Initial 'topics' Array
 function renderButtons() {
-    // Deleting the buttons prior to adding new movies
+
+    // Deletes the Buttons Prior to Adding New Titles
     $("#buttons-view").empty();
-    // Looping through the array of movies
+
+    // Loops Through 'topics' Array
     for (var i = 0; i < topics.length; i++) {
-        // Dynamicaly generates buttons for each term in the array
-        var button = $("<button>");
-          // Adding a class to the button
+
+        // Dynamicaly Generates Buttons for Each Term in the Array; Classes from UIKit for Styling
+        var button = $("<button class='gif-button uk-button uk-button-default uk-button-large'>");
+
+          // Adds a Class to the Button
           button.addClass("topics-button");
-          // Adding a data-attribute
+
+          // Adds a Data-Attribute for displayGIF Function
           button.attr("data-name", topics[i]);
-          // Providing the initial button text
+
+          // Provides initial button text
           button.text(topics[i]);
-          // Adding the button to the buttons-view div
+
+          // Adds the BButton to the HTML
           $("#buttons-view").append(button);
     }
-}
+};
 
-// This function handles events where one button is clicked
+// Button onclick Function
 $("#add-gifs").on("click", function() {
+
     // Prevents Submitting to Page
     event.preventDefault();
 
+    // Creates a Search Term from User Input
     var searchTerm = $('#search-input').val().trim();
-        topics.push(searchTerm);
-        renderButtons();
-    $('#search-input').val('');
-      });
 
-// Function to Animate GIFs
+    // Pushes User Search to 'topics' Array
+    topics.push(searchTerm);
+
+    // Calls Button Function
+    renderButtons();
+
+    // Empties Text from Input Box
+    $('#search-input').val('');
+});
+
+// Onclick Function to Animate GIFs
 $('#gifs-view').on('click', ".gif", function(){
+
+    // Variable State Assigned to Data State of Clicked Gif
     var state = $(this).attr('data-state');
+
+    // Troubleshoot Current State
     console.log(state)
 
+    // If The Gifs State is "Still", Change it to "Animate" When Clicked
     if (state === 'still') {
         $(this).attr('src', $(this).attr('data-animate')).attr('data-state', 'animate');
+    
+    // If The Gifs State is "Animated", Change it to "Still" When Clicked
     } else {
         $(this).attr('src', $(this).attr('data-still')).attr('data-state', 'still');
     } 
-})
+});
 
-// Calling the renderButtons function to display the intial buttons
+// Calls the renderButtons function to Display Intial Buttons
 renderButtons();
 
-// Calls Function for Displaying Gifs
-$(document).on("click", ".topics-button", displayMovieInfo);
+// Calls Function for Displaying Gifs When a Button is Clicked
+$(document).on("click", ".topics-button", displayGIF);
