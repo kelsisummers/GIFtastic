@@ -3,6 +3,8 @@ var topics = ["The Incredibles", "Wall-E", "Inside Out", "Toy Story", "Ratatouil
 
 
 
+
+
 // Function for dumping the JSON content for each button into the div
 function displayGIF() {
 
@@ -76,6 +78,9 @@ function renderButtons() {
 
 // Button onclick Function
 $("#add-gifs").on("click", function() {
+    
+
+    // console.log(searchTerm);
 
     // Prevents Submitting to Page
     event.preventDefault();
@@ -83,15 +88,23 @@ $("#add-gifs").on("click", function() {
     // Creates a Search Term from User Input
     var searchTerm = $('#search-input').val().trim();
 
-    // Pushes User Search to 'topics' Array
-    topics.push(searchTerm);
-
-    // Calls Button Function
-    renderButtons();
+    if (searchTerm==="") {
+        alert('Error! Type Something Pixar!')
+    } else {
+        // Pushes User Search to 'topics' Array
+        topics.push(searchTerm);
+        // Calls Button Function
+        renderButtons();
+    }
 
     // Empties Text from Input Box
     $('#search-input').val('');
+
+    // Troubleshoot searchTerm
+    console.log(searchTerm);
 });
+
+
 
 // Onclick Function to Animate GIFs
 $('#gifs-view').on('click', ".gif", function(){
@@ -112,8 +125,9 @@ $('#gifs-view').on('click', ".gif", function(){
     } 
 });
 
-// Calls the renderButtons function to Display Intial Buttons
+// Calls the renderButtons function to Display Intial Buttons\
 renderButtons();
+
 
 // Calls Function for Displaying Gifs When a Button is Clicked
 $(document).on("click", ".topics-button", displayGIF);

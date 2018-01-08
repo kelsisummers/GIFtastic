@@ -45,6 +45,12 @@ h2 {
     margin-bottom: 80px;
 }
 
+#buttons-column {
+    margin-bottom: 75px;
+    border-right: solid 1px lightgray;
+    height: 150px;
+}
+
 /* Form Appearance */
 #search-input {
     margin-bottom: 30px;
@@ -82,18 +88,25 @@ h2 {
 @media screen and (max-width: 768px) {
 
     h1 {
-        font-size: 75px;
+        font-size: 50px;
     }
 
     h2 {
-        font-size: 75px;
+        font-size: 50px;
     }
 
     #buttons-column {
         margin-bottom: 300px;
+        border: solid 0px lightgray;
     }
 
     form {
-     margin-top: 100px;
+     margin-top: 500px;
     }
+
+    body {
+        font-size: 12px;
+    }
+
+
  }
