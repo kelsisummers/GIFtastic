@@ -7,6 +7,7 @@ body {
     height: 60vw;
     z-index: 0;
     position: relative;
+    border-bottom: solid 3px lightgray;
 }
 
 /* Ballon Images */
