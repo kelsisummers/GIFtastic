@@ -1,4 +1,7 @@
 /* Cover Image */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 .uk-background-cover {
     background-image: url('../images/cover-image.jpg');
     height: 60vw;
@@ -17,10 +20,12 @@
 /* Title Text */
 h1 {
     font-size: 200px;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 h2 {
     font-size: 100px;
+    font-family: 'Indie Flower', cursive;
 }
 
 /* Button Appearance */
