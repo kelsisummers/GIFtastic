@@ -9,3 +9,5 @@ Instructions:
   - To populate GIFs, click on a button
   - GIFs are generated in static mode, click on a GIF to animate it
   - To create a new button (keyword search), 'Type Something Pixar' and click 'Add Pixels'
+  
+GitHub Pages Link: https://kelsisummers.github.io/GIFtastic-Giphy-API/
