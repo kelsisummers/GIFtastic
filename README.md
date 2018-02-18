@@ -4,10 +4,20 @@ Project 7: Use the GIPHY API to make a dynamic web page that populates with GIFs
 
 Theme: Pixar GIFs
 
+GitHub Pages: https://kelsisummers.github.io/GIFtastic-Giphy-API/
+
 Instructions:
   - Scroll down below the cover image
   - To populate GIFs, click on a button
   - GIFs are generated in static mode, click on a GIF to animate it
   - To create a new button (keyword search), 'Type Something Pixar' and click 'Add Pixels'
   
-GitHub Pages Link: https://kelsisummers.github.io/GIFtastic-Giphy-API/
+Software Stack:
+  - Javascript
+  - jQuery
+  - APIs
+  - HTML
+  - CSS
+  - UIkit Framework
+  - Bootstrap CSS Grid
+  
