@@ -1,10 +1,10 @@
 # GIFtastic-Giphy-API
 
-Project 7: Use the GIPHY API to make a dynamic web page that populates with GIFs. Use AJAX to call the GIPHY API, and JavaScript and jQuery to change the HTML.
+GitHub Pages: https://kelsisummers.github.io/GIFtastic/
+
+Uses the Giphy API to make a dynamic web page populated with thematic GIFs. Utilizes AJAX to call the Giphy API, and JavaScript and jQuery to change the HTML.
 
 Theme: Pixar GIFs
-
-GitHub Pages: https://kelsisummers.github.io/GIFtastic/
 
 Instructions:
   - Scroll down below the cover image
@@ -13,11 +13,11 @@ Instructions:
   - To create a new button (keyword search), 'Type Something Pixar' and click 'Add Pixels'
   
 Software Stack:
-  - Javascript
+  - JavaScript
   - jQuery
-  - APIs
+  - Giphy Api
   - HTML
   - CSS
-  - UIkit Framework
-  - Bootstrap CSS Grid
+  - UIkit CSS Framework
+  - Bootstrap Grid
   
