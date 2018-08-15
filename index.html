@@ -1,75 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GIFtastic</title>
-
-    <!-- Bootstrap CDN for Responsive Grid-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-    <!-- UIKit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Montserrat" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>GIFtastic</title>
+	
+  <!-- Bootstrap CDN for Responsive Grid-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <!-- UIKit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+  <!-- Style CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Montserrat" rel="stylesheet">
+	
 </head>
 <body>
 
-    <!-- Cover Image -->
-    <div class="uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top">
-
-        <!-- Parallax Balloons -->
-        <div id ="balloons" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5"><img src="assets/images/balloons-strings.png"></div>
-
-        <!-- Parallax Title Text -->
-        <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-            <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Pixels</h1>
-            <h2 uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">of Pixar</h2>
-        </div>
+  <!-- Cover Image -->
+  <div class="uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top">
+    <!-- Parallax Balloons -->
+    <div id ="balloons" class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5"><img src="assets/images/balloons-strings.png"></div>
+    <!-- Parallax Title Text -->
+    <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+      <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Pixels</h1>
+      <h2 uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">of Pixar</h2>
     </div>
-
-    <!-- Container for Buttons and GIFs -->
-    <div id="button-container" class="row">
-        
-        <!-- Left Column Holds Buttons and Creates a Border-Right -->
-        <div id="buttons-column" class="col-sm-6">
-
-            <!-- Buttons Will Populate Here -->
-            <div id="buttons-view"></div>
-
-        </div>
-
-        <!-- Right Column Contains Search Form -->
-        <div class="col-sm-6">
-
-            <!-- Search Form Code Here -->
-            <form id="gif-form">
-
-                <!-- Input Search Field with Placeholder Text -->
-                <input class='uk-input uk-form-width-large' type="text" id='search-input' placeholder="Type Something Pixar"><br>
-    
-                <!-- Click Button to Add New Search Term -->
-                <input class='uk-button uk-button-default uk-button-large' id='add-gifs' type='submit' value="Add Pixels">
-
-            </form>
-
-        </div>
-
-        <!-- Second Row Will Contain All Gifs -->
-        <div class='row'>
-
-            <!-- GIFS Will Appear Here -->
-            <div id="gifs-view" class="col-md-12 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-text-center" uk-grid-parallax="translate:200"></div>
-
-        </div>
+  </div>
+  <!-- Container for Buttons and GIFs -->
+  <div id="button-container" class="row">   
+    <!-- Left Column Holds Buttons and Creates a Border-Right -->
+    <div id="buttons-column" class="col-md-6 col-sm-12">
+      <!-- Buttons Will Populate Here -->
+    	<div id="buttons-view"></div>
     </div>
-        
+    <!-- Right Column Contains Search Form -->
+    <div class="col-md-6 col-sm-12 form-container">
+    	<!-- Search Form Code Here -->
+      <form id="gif-form">
+      	<!-- Input Search Field with Placeholder Text -->
+        <input class='uk-input uk-form-width-large' type="text" id='search-input' placeholder="Type SomethingPixar"><br>
+  
+        <!-- Click Button to Add New Search Term -->
+        <input class='uk-button uk-button-default uk-button-large' id='add-gifs' type='submit' value="Add Pixels">
+      </form>
+    </div>
+    <!-- Second Row Will Contain All Gifs -->
+    <div class='row'>
+      <!-- GIFS Will Appear Here -->
+      <div id="gifs-view" class="col-md-12 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@luk-text-center" uk-grid-parallax="translate:200"></div>
+    </div>
+  </div>   
 
 <!-- UIKit Javascript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
