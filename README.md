@@ -12,7 +12,7 @@ Instructions:
   - GIFs are generated in static mode, click on a GIF to animate it
   - To create a new button (keyword search), 'Type Something Pixar' and click 'Add Pixels'
   
-Software Stack:
+Tech Stack:
   - JavaScript
   - jQuery
   - Giphy Api
