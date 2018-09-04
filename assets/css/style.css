@@ -78,6 +78,25 @@ h2 {
   right: 0px;
 }
 
+img {
+  border-style: none;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#gif {
+  display: flex;
+  justify-content: center;
+}
+
+#gif-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Changes Color and Opacity of Rating Text */
 .uk-label {
   background-color: black;
@@ -124,5 +143,12 @@ h2 {
 		margin-left: auto;
     padding-right: 25px;
 	}
+}
+
+@media screen and (max-width: 500px) {
+  #gif-container{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /* End of Responsive Queries */
