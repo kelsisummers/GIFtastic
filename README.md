@@ -1,6 +1,6 @@
 # GIFtastic-Giphy-API
 
-GitHub Pages: https://kelsisummers.github.io/GIFtastic/
+<strong>Hosted App Link: https://kelsisummers.github.io/GIFtastic/</strong>
 
 Uses the Giphy API to make a dynamic web page populated with thematic GIFs. Utilizes AJAX to call the Giphy API, and JavaScript and jQuery to change the HTML.
 
