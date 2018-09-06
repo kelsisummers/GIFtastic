@@ -1,4 +1,4 @@
-# GIFtastic-Giphy-API
+# GIFtastic
 
 <strong>Hosted App Link: https://kelsisummers.github.io/GIFtastic/</strong>
 
